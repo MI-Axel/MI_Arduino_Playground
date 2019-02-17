@@ -6,17 +6,17 @@
  * @section intro_sec Introduction
  *
  * This is the library for the Curiosity Motor Shield V1 for Arduino. 
- * It supports DC motors & Servo motors. And it also provides the interface of I2C and SPI to sensors. 
+ * It supports 2 DC motors (or 1 stepper motors) & Servo motors. And it also provides the interface of I2C and SPI to sensors. 
  * This shield/wing uses I2C to communicate, 2 pins (SCL+SDA) are required
  * to interface.
  *
- * MuchInovation invests time and resources providing this open source code,
- * please support MuchInovation and open-source hardware by purchasing
+ * MuchInnovation invests time and resources providing this open source code,
+ * please support MuchInnovation and open-source hardware by purchasing
  * products from MuchInovation!
  *
  * @section author Author
  *
- * Written by Axel from MuchInovation.
+ * Written by Axel from MuchInnovation.
  *
  * @section license License
  *
@@ -30,7 +30,7 @@
 /**************************************************************************/
 /*!
     @brief  Create the Motor Shield object at an I2C address, default is 0x60
-    @param  addr Optional I2C address if you've changed it
+    @param  addr Optional I2C address if you've changed it by adding more resistors to array.
 */
 /**************************************************************************/
 Curiosity_MotorShield::Curiosity_MotorShield(uint8_t addr) 
@@ -58,7 +58,7 @@ Curiosity_MotorShield::Curiosity_MotorShield(uint8_t addr)
     @brief  Initialize the I2C hardware and PWM driver, then turn off all pins.
     @param    freq
     The PWM frequency for the driver, used for speed control and microstepping.
-    By default we use 1600 Hz which is a little audible but efficient.
+    By default we use 50 Hz which is the standard control protocol of servo motors.
     @param    theWire
     A pointer to an optional I2C interface. If not provided, we use Wire or Wire1
     (on Due)
@@ -113,6 +113,9 @@ void Curiosity_MotorShield::setPin(uint8_t pin, boolean value) {
     _pwm.setPWM(pin, 4096, 0);
 }
 
+/******************************************
+               MOTORS
+******************************************/
 
 /**************************************************************************/
 /*!
@@ -160,9 +163,6 @@ Curiosity_DCMotor *Curiosity_MotorShield::getMotor(uint8_t num)
 }
 
 
-/******************************************
-               MOTORS
-******************************************/
 
 /**************************************************************************/
 /*!

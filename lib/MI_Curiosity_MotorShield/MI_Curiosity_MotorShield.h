@@ -1,15 +1,13 @@
 /******************************************************************
- This is the library for the Curiosity Motor Shield V2 for Arduino. 
+ This is the library for the Curiosity Motor Shield V1 for Arduino. 
  It supports DC motors & Stepper motors with microstepping as well
- as stacking-support. It is *not* compatible with the V1 library!
-
- It will only work with https://www.adafruit.com/products/1483
+ as stacking-support.
  
- Curiosity invests time and resources providing this open
- source code, please support Curiosity and open-source hardware
- by purchasing products from Curiosity!
+ MuchInnovation invests time and resources providing this open
+ source code, please support MuchInnovation and open-source hardware
+ by purchasing products from us!
  
- Written by Limor Fried/Ladyada for Curiosity Industries.
+ Written by Axel from MuchInnovation.
  BSD license, check license.txt for more information.
  All text above must be included in any redistribution.
  ******************************************************************/

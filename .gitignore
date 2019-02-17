@@ -1,4 +1,6 @@
-./ArduinoMake/:
+./Arduino-Makefile/:
+./bin/:
+.gitignore
 tags
 *.o
 *.pbi

@@ -4,11 +4,11 @@
   These displays use I2C to communicate, 2 pins are required to  
   interface. For Arduino UNOs, thats SCL -> Analog 5, SDA -> Analog 4
 
-  MI_Curiosity invests time and resources providing this open source code, 
-  please support MI_Curiosity and open-source hardware by purchasing 
-  products from MI_Curiosity!
+  MuchInnovation invests time and resources providing this open source code, 
+  please support us and open-source hardware by purchasing 
+  products from us!
 
-  Written by Axel for MuchInovation Industries.  
+  Written by Axel for MuchInnovation.  
   BSD license, all text above must be included in any redistribution
  ****************************************************/
 
